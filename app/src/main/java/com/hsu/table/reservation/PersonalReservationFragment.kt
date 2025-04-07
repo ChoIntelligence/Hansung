@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dev.jahidhasanco.seatbookview.SeatBookView
 import com.hsu.table.reservation.databinding.FragmentPersonalReservationBinding
+import dev.jahidhasanco.seatbookview.SeatClickListener
 
 class PersonalReservationFragment : Fragment() {
 
@@ -59,7 +60,7 @@ class PersonalReservationFragment : Fragment() {
         seatBookView.show()
 
         // SeatBookView의 좌석 클릭 이벤트 리스너 설정(라이브러리 내 토글 기능 내장)
-        seatBookView.setSeatClickListener(object : SeatBookView.SeatClickListener {
+        seatBookView.setSeatClickListener(object : SeatClickListener {
             override fun onAvailableSeatClick(selectedIdList: List<Int>, view: View) {
                 // 이미 선택된 좌석이 재클릭되면 자동으로 취소(토글)됩니다.
                 // 필요에 따라 추가 작업(예: 선택된 좌석 정보 저장 등)을 구현할 수 있습니다.

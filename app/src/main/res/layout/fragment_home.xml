@@ -7,6 +7,12 @@
     android:gravity="center"
     android:padding="16dp">
 
+    <TextView
+        android:id="@+id/textHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="한성대학교 상상파크 예약 시스템" />
+
     <!-- 로그인 버튼 -->
     <Button
         android:id="@+id/btnLogin"

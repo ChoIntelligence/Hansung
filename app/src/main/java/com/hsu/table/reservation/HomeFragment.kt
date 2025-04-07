@@ -32,9 +32,12 @@ class HomeFragment : Fragment() {
 
         // 개인 예약 버튼 클릭 리스너 설정
         binding.btnPersonalReservation.setOnClickListener {
-            // 개인 예약 화면으로 전환하는 코드 또는 로직 추가
+            // 예를 들어, MainActivity의 프래그먼트 컨테이너에 PersonalReservationFragment로 교체
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, PersonalReservationFragment())
+                .addToBackStack(null)
+                .commit()
         }
-
         // 단체 예약 버튼 클릭 리스너 설정
         binding.btnGroupReservation.setOnClickListener {
             // 단체 예약 화면으로 전환하는 코드 또는 로직 추가

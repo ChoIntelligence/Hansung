@@ -1,19 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <!-- SeatBookView를 사용하여 좌석 배치 화면 구성 -->
-    <dev.jahidhasanco.seatbookview.SeatBookView
-        android:id="@+id/seatBookView"
+    <!-- 상단에 고정된 텍스트뷰 (또는 ImageView로 변경 가능) -->
+    <TextView
+        android:id="@+id/tvHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:seat_gaping="10dp"
-        app:seat_text_size="15sp"
-        app:available_seats_text_color="#59575C"
-        app:seat_select_limit="1"
-    />
+        android:text="개인 예약 좌석 선택"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        />
 
-</ScrollView>
+    <!-- 스크롤 가능한 영역: ScrollView 내부에 SeatBookView 배치 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- SeatBookView는 스크롤 영역 안에 배치 -->
+        <dev.jahidhasanco.seatbookview.SeatBookView
+            android:id="@+id/seatBookView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:seat_gaping="10dp"
+            app:seat_text_size="15sp"
+            app:available_seats_text_color="#59575C"
+            app:seat_select_limit="1"
+
+            />
+    </ScrollView>
+</LinearLayout>
