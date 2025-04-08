@@ -23,7 +23,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp">
 
         <!-- SeatBookView는 스크롤 영역 안에 배치 -->
         <dev.jahidhasanco.seatbookview.SeatBookView
@@ -35,7 +36,9 @@
             app:seat_text_size="15sp"
             app:available_seats_text_color="#59575C"
             app:seat_select_limit="1"
-
-            />
+            app:available_seat_background="@drawable/seat_available"
+            app:reserved_seat_background="@drawable/seat_reserved"
+            app:booked_seat_background="@drawable/seat_booked"
+            app:selected_seats_background="@drawable/seat_selected"/>
     </ScrollView>
 </LinearLayout>

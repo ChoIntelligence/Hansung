@@ -1,0 +1,10 @@
+/AA/AU/__/
+/RR/RA/__/
+/UA/AA/__/
+/AA/AA/__/
+/AA/UU/__/
+/UR/AA/__/
+/AA/AA/__/
+/AU/UA/__/
+/AU/AA/__/
+/AA/AA
