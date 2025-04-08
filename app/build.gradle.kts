@@ -32,6 +32,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+        freeCompilerArgs += listOf("-Xopt-in=kotlin.ExperimentalStdlibApi")
     }
     buildFeatures {
         viewBinding = true

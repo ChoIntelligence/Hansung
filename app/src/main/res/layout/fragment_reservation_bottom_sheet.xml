@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvReservationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="예약 시간 선택"
+        android:textSize="18sp"
+        android:gravity="center" />
+
+    <RadioGroup
+        android:id="@+id/reservationRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+        <RadioButton
+            android:id="@+id/rb30min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30분" />
+        <RadioButton
+            android:id="@+id/rb1hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1시간" />
+        <RadioButton
+            android:id="@+id/rb1_30hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1시간 30분" />
+        <RadioButton
+            android:id="@+id/rb2hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2시간" />
+        <RadioButton
+            android:id="@+id/rb2_30hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2시간 30분" />
+        <RadioButton
+            android:id="@+id/rb3hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3시간" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="예약하기" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="취소하기" />
+    </LinearLayout>
+</LinearLayout>
