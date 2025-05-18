@@ -2,57 +2,38 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- 상단 고정 헤더 -->
+    <!-- 상단 고정 헤더 (개인 예약 제목 등) -->
     <TextView
         android:id="@+id/tvHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/select_individual"
+        android:text="개인 예약 (테이블 선택)"
         android:textSize="20sp"
-        android:padding="16dp"
         android:gravity="center"
+        android:padding="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp" />
 
-    <!-- 스크롤 가능한 영역 -->
-    <ScrollView
+    <!-- 수평 스크롤 영역에서 여러 테이블(SeatBookView) 배치 -->
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginBottom="10dp">
+        android:scrollbars="horizontal">
 
-        <!-- 좌석 컨테이너를 FrameLayout으로 감싸 SeatBookView와 종료시간 오버레이를 같이 배치 -->
-        <FrameLayout
-            android:id="@+id/seatContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/horizontalContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <!-- 코드에서 table_i.json마다 동적 SeatBookView 추가 -->
+        </LinearLayout>
+    </HorizontalScrollView>
 
-            <!-- 실제 좌석 배치 뷰 -->
-            <dev.jahidhasanco.seatbookview.SeatBookView
-                android:id="@+id/seatBookView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                app:seat_gaping="0dp"
-                app:seat_text_size="15sp"
-                app:available_seats_text_color="#59575C"
-                app:seat_select_limit="1"
-                app:seat_size="128dp"
-                app:available_seat_background="@drawable/seat_available"
-                app:reserved_seat_background="@drawable/seat_reserved"
-                app:booked_seat_background="@drawable/seat_booked"
-                app:selected_seats_background="@drawable/seat_selected"/>
-
-            <!-- 종료시간 표시용 오버레이 컨테이너 -->
-            <FrameLayout
-                android:id="@+id/overlayContainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clickable="false"/>
-        </FrameLayout>
-    </ScrollView>
 </LinearLayout>

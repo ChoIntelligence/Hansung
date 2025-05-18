@@ -1,5 +1,7 @@
 package com.hsu.table.reservation
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,45 +10,114 @@ import androidx.fragment.app.Fragment
 import com.hsu.table.reservation.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
-    // ViewBinding 객체(메모리 누수를 방지하기 위해 _binding 사용)
+
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private val REQUEST_FACE_CAPTURE_PERSONAL = 100
+    private val REQUEST_FACE_CAPTURE_CANCEL   = 200
 
-    // 프래그먼트의 뷰를 생성하는 부분
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        // fragment_home.xml 파일을 바인딩
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
-    // 뷰가 생성된 후 버튼 클릭 이벤트 등 초기화 작업 수행
+    // HomeFragment.kt (예시)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 로그인 버튼 클릭 리스너 설정
-        binding.btnLogin.setOnClickListener {
-            // 로그인 화면으로 전환하는 코드 또는 로직 추가
+        binding.btnPersonalReservation.setOnClickListener {
+            // FaceCaptureActivity 실행, 개인 예약 모드
+            val intent = Intent(requireContext(), FaceCaptureActivity::class.java)
+            intent.putExtra("IS_PERSONAL_RESERVATION", true)
+            startActivityForResult(intent, REQUEST_FACE_CAPTURE_PERSONAL)
         }
 
-        // 개인 예약 버튼 클릭 리스너 설정
-        binding.btnPersonalReservation.setOnClickListener {
-            // 예를 들어, MainActivity의 프래그먼트 컨테이너에 PersonalReservationFragment로 교체
+        // HomeFragment (발췌)
+        binding.btnGroupReservation.setOnClickListener {
+            // 1) 인원수 선택 바텀시트 띄운다
+            val groupSizeBottomSheet = GroupSizeBottomSheetDialogFragment { selectedGroupSize ->
+                // 2) 이용 시간 선택 바텀시트
+                val durationBottomSheet = DurationBottomSheetDialogFragment({ selectedDuration ->
+                    // 두 값이 정해졌으니 GroupReservationFragment로 이동
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, GroupReservationFragment().apply {
+                            arguments = Bundle().apply {
+                                putInt("group_size", selectedGroupSize)        // 2,3,4
+                                putString("reservation_duration", selectedDuration) // "1시간", "2시간" ...
+                            }
+                        })
+                        .addToBackStack(null)
+                        .commit()
+                }
+                )
+                durationBottomSheet.show(parentFragmentManager, "DurationBottomSheet")
+            }
+            groupSizeBottomSheet.show(parentFragmentManager, "GroupSizeBottomSheet")
+        }
+
+        binding.btnCancelReservation.setOnClickListener {
+            val cancelFrag = CancelReservationFragment()
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, PersonalReservationFragment())
+                .replace(R.id.fragment_container, cancelFrag)
                 .addToBackStack(null)
                 .commit()
         }
-        // 단체 예약 버튼 클릭 리스너 설정
-        binding.btnGroupReservation.setOnClickListener {
-            // 단체 예약 화면으로 전환하는 코드 또는 로직 추가
+
+        binding.btnCheckUsage.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, UsageStatusFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+
+
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK && data != null) {
+            val userId = data.getStringExtra("user_id") ?: return
+
+            when (requestCode) {
+                // 개인 예약 모드 → PersonalReservationFragment 로 이동
+                REQUEST_FACE_CAPTURE_PERSONAL -> {
+                    val frag = PersonalReservationFragment().apply {
+                        arguments = Bundle().apply {
+                            putString("user_id", userId)
+                        }
+                    }
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, frag)
+                        .addToBackStack(null)
+                        .commit()
+                }
+
+                // 예약 취소 모드 → CancelReservationFragment 로 이동
+                REQUEST_FACE_CAPTURE_CANCEL -> {
+                    val frag = CancelReservationFragment().apply {
+                        arguments = Bundle().apply {
+                            putString("user_id", userId)
+                        }
+                    }
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, frag)
+                        .addToBackStack(null)
+                        .commit()
+                }
+            }
         }
     }
 
-    // 프래그먼트 뷰가 파괴될 때 바인딩 해제
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }

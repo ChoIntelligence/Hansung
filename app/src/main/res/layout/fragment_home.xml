@@ -1,39 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_home_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textHome"
+    <!-- (A) 메인 이미지: 중앙 배치 -->
+    <ImageView
+        android:id="@+id/imgMain"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="한성대학교 상상파크 예약 시스템" />
+        android:layout_height="461dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="메인 이미지"
+        android:src="@drawable/main_image" />
 
-    <!-- 로그인 버튼 -->
-    <Button
-        android:id="@+id/btnLogin"
+    <!-- (B) 하단 버튼 4개를 가로로 나란히 배치 -->
+    <LinearLayout
+        android:id="@+id/layout_button_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="로그인" />
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    <!-- 개인 예약 버튼 -->
-    <Button
-        android:id="@+id/btnPersonalReservation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="개인 예약" />
+        <!-- 1) 개인 이용 버튼 -->
+        <Button
+            android:id="@+id/btnPersonalReservation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="개인 이용"
+            android:textSize="24sp" />
 
-    <!-- 단체 예약 버튼 (2~4인) -->
-    <Button
-        android:id="@+id/btnGroupReservation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="단체 예약 (2~4인)" />
+        <!-- 2) 단체 이용 버튼 -->
+        <Button
+            android:id="@+id/btnGroupReservation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="단체 이용"
+            android:layout_margin="16dp"
+            android:textSize="24sp" />
 
+        <!-- 4) 이용 종료 버튼 -->
+        <Button
+            android:id="@+id/btnCancelReservation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이용 종료"
+            android:layout_margin="16dp"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnCheckUsage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="이용 현황"
+            android:textSize="24sp" />
+
+    </LinearLayout>
 </LinearLayout>

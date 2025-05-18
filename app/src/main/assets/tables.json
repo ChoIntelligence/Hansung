@@ -1,0 +1,378 @@
+[
+  {
+    "tableId": 1,
+    "reservationType": "PERSONAL",
+    "seats": [
+      {
+        "row": 1,
+        "col": 1,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 10,
+          "minute": 30
+        }
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 10,
+          "minute": 45
+        }
+      }
+    ],
+    "reservationEndTime": null
+  },
+  {
+    "tableId": 2,
+    "reservationType": "GROUP",
+    "seats": [
+      {
+        "row": 1,
+        "col": 1,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 11,
+          "minute": 0
+        }
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 11,
+          "minute": 0
+        }
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 11,
+          "minute": 0
+        }
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 11,
+          "minute": 0
+        }
+      }
+    ],
+    "reservationEndTime": {
+      "hour": 11,
+      "minute": 30
+    }
+  },
+  {
+    "tableId": 3,
+    "reservationType": "NONE",
+    "seats": [
+      {
+        "row": 1,
+        "col": 1,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      }
+    ],
+    "reservationEndTime": null
+  },
+  {
+    "tableId": 4,
+    "reservationType": "PERSONAL",
+    "seats": [
+      {
+        "row": 1,
+        "col": 1,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 12,
+          "minute": 10
+        }
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      }
+    ],
+    "reservationEndTime": null
+  },
+  {
+    "tableId": 5,
+    "reservationType": "GROUP",
+    "seats": [
+      {
+        "row": 1,
+        "col": 1,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 13,
+          "minute": 15
+        }
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 13,
+          "minute": 15
+        }
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 13,
+          "minute": 15
+        }
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 13,
+          "minute": 15
+        }
+      }
+    ],
+    "reservationEndTime": {
+      "hour": 14,
+      "minute": 0
+    }
+  },
+  {
+    "tableId": 6,
+    "reservationType": "NONE",
+    "seats": [
+      {
+        "row": 1,
+        "col": 1,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      }
+    ],
+    "reservationEndTime": null
+  },
+  {
+    "tableId": 7,
+    "reservationType": "PERSONAL",
+    "seats": [
+      {
+        "row": 1,
+        "col": 1,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 14,
+          "minute": 50
+        }
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 15,
+          "minute": 0
+        }
+      }
+    ],
+    "reservationEndTime": null
+  },
+  {
+    "tableId": 8,
+    "reservationType": "GROUP",
+    "seats": [
+      {
+        "row": 1,
+        "col": 1,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 16,
+          "minute": 5
+        }
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 16,
+          "minute": 5
+        }
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 16,
+          "minute": 5
+        }
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 16,
+          "minute": 5
+        }
+      }
+    ],
+    "reservationEndTime": {
+      "hour": 16,
+      "minute": 30
+    }
+  },
+  {
+    "tableId": 9,
+    "reservationType": "NONE",
+    "seats": [
+      {
+        "row": 1,
+        "col": 1,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      }
+    ],
+    "reservationEndTime": null
+  },
+  {
+    "tableId": 10,
+    "reservationType": "PERSONAL",
+    "seats": [
+      {
+        "row": 1,
+        "col": 1,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 17,
+          "minute": 10
+        }
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "seatStatus": "EMPTY",
+        "reservationTime": null
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "seatStatus": "OCCUPIED",
+        "reservationTime": {
+          "hour": 17,
+          "minute": 15
+        }
+      }
+    ],
+    "reservationEndTime": null
+  }
+]

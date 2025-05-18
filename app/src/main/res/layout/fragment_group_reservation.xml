@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 상단 고정 헤더 (개인 예약 제목 등) -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="단체 예약 (테이블 선택)"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- 수평 스크롤 영역에서 여러 테이블(SeatBookView) 배치 -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
+            android:id="@+id/horizontalContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <!-- 코드에서 table_i.json마다 동적 SeatBookView 추가 -->
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

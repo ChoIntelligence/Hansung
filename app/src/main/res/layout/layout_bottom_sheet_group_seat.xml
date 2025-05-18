@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- 선택된 좌석 이름 표시 -->
+    <TextView
+        android:id="@+id/tvSeatName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="선택된 좌석 : ???"
+        android:textSize="18sp"
+        android:paddingBottom="16dp" />
+
+    <!-- 버튼 2개 (얼굴 등록 / 선택 취소) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRegisterFace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="얼굴 등록" />
+
+        <Button
+            android:id="@+id/btnCancelSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="선택 취소"
+            android:layout_marginLeft="16dp" />
+    </LinearLayout>
+
+</LinearLayout>

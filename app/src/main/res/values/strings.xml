@@ -3,5 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="select_individual">개인 예약 좌석 선택</string>
+    <string name="select_individual">개인 좌석 선택</string>
+    <string name="select_group">단체 좌석 선택</string>
+
 </resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutDurationButtons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- 안내 제목 (옵션) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이용 시간 선택"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 30분 -->
+    <Button
+        android:id="@+id/btn30min"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="30분"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 1시간 -->
+    <Button
+        android:id="@+id/btn1hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1시간"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 1시간30분 -->
+    <Button
+        android:id="@+id/btn1h30m"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1시간 30분"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 2시간 -->
+    <Button
+        android:id="@+id/btn2hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2시간"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 2시간30분 -->
+    <Button
+        android:id="@+id/btn2h30m"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2시간 30분"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 3시간 -->
+    <Button
+        android:id="@+id/btn3hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3시간"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 취소 -->
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="취소"/>
+</LinearLayout>

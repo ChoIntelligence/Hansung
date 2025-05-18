@@ -1,16 +1,29 @@
 package com.hsu.table.reservation
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // activity_main.xml 레이아웃 사용
         setContentView(R.layout.activity_main)
 
-        // 최초 실행 시 HomeFragment를 container에 추가
-        if (savedInstanceState == null) {
+        val gotoFrag = intent?.getStringExtra("goto_fragment")
+        val userIdFromIntent = intent?.getStringExtra("user_id")
+
+        if (gotoFrag == "PersonalReservationFragment") {
+            // (A) PersonalReservationFragment 로 교체
+            val fragment = PersonalReservationFragment().apply {
+                arguments = Bundle().apply {
+                    putString("user_id", userIdFromIntent)
+                }
+            }
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit()
+        } else {
+            // (B) 기본 HomeFragment
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, HomeFragment())
                 .commit()

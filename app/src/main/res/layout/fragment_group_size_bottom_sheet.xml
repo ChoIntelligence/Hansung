@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerGroupSizeBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvGroupSizeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="단체 예약 인원을 선택해주세요."
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 2인 버튼 -->
+    <Button
+        android:id="@+id/btnSize2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2인"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 3인 버튼 -->
+    <Button
+        android:id="@+id/btnSize3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3인"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 4인 버튼 -->
+    <Button
+        android:id="@+id/btnSize4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4인"
+        android:layout_marginBottom="8dp"/>
+</LinearLayout>
